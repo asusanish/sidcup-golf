@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,300&family=Open+Sans&family=Poppins:wght@300;400&family=Roboto:wght@900&family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#nav{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    /* background-color: lightseagreen; */
+    margin: auto;
+    position: fixed;
+    z-index: 99;
+    
+}
+
+#nav .content{
+    /* width: 80vw; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 45px;
+    color: white;
+    padding: 0 120px;
+    
+}
+
+#nav h4{
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#nav img{
+    width: 8vw;
+    height: 8vh;
+}
+
+#cursor{
+    height: 30px;
+    width: 30px;
+    background-color: #95c11e;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all linear .1s;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e62;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(90px);
+    z-index: 9;
+    transition: all linear 0.5s;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+
+}
+#page1 h2{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 h3{
+    font-size: 18px;
+    font-weight: 500;
+    width: 45%;
+    text-align: center;
+}
+
+#page1 .arrow{
+    height: 230px;
+    width: 230px;
+    background-color: transparent;
+    border: 2px solid #95c11e;
+    position: absolute;
+    left: -4%;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition:  all ease .6s;
+}
+
+#page1 .arrow:hover{
+    scale: 0.4;
+    background-color: #95c11e;
+}
+
+#page1 .arrow i{
+    font-size: 40px;
+    font-weight: 100;
+
+}
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+}
+
+.scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+.scroller-in-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller-in-2{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 900;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    transition: all linear .5s;
+}
+
+.scroller h4:hover{
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+#about-us{
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+#about-us .about-us-text-content{
+    text-align: center;
+    flex-direction: column;
+    width: 52%;
+}
+
+#about-us .about-us-text-content h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#about-us .about-us-text-content p{
+    font-size: 20px;
+    line-height: 1.9em;
+    font-weight: 400;
+}
+
+#about-us .about-us-text-content p:nth-child(3){
+    margin-top: 50px;
+}
+
+#about-us img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
+}
+
+
+#card-container{
+    width: 100%;
+    height: 60vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    z-index: -2;
+    margin-top: 90px;
+}
+
+.card{
+    width: 23%;
+    height: 90%;
+    background-color: #95c11e;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    cursor: pointer;
+}
+
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #95c11e;
+    padding: 100px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    cursor: pointer;
+}
+
+.overlay h4{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.overlay p{
+    color: #000;
+    margin: 30px 0;
+    line-height: 1.5em;
+}
+
+.card:hover .overlay{
+    opacity: 1 !important;
+}
+
+.green-div{
+    width: 100%;
+    height: 21vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    background: linear-gradient(to left bottom, #1cad1c, #639b22, #95c11e );
+}
+
+.green-div p{
+    text-align: center;
+    width: 50%;
+    font-size: 1.8vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 50px;
+    color: black;
+}
+
+.green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+    /* rotate: 270deg; */
+    opacity: .5;
+}
+
+@media (min-width:1560px) {
+    .overlay h4{
+        width: 20%;
+    }
+}
+
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+#page3>p{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    width: 60%;
+    line-height: 1.5em;
+}
+
+#page3 img{
+    position: absolute;
+    height: 40px;
+}
+
+#up{
+    left: 15%;
+    top: 34%;
+}
+
+
+#down{
+    right: 15%;
+    bottom: 34%;
+}
+
+#page4{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.elem{
+    width: 26%;
+    height: 40%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    transition: all ease 0.5s;
+}
+.elem h2{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #95c11e;
+    position: absolute;
+    z-index: 100;
+    font-weight: 900;
+    font-size: 1.6em;
+    transition: all ease 0.5s;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: all ease 0.5s;
+}
+
+.elem:hover h2{
+    color: white;
+    background-color: transparent;
+
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+#page4 h1{
+    font-size: 4.85vw;
+    position: absolute;
+    top: 55px;
+    font-weight: 900;
+    color: #000;
+    text-shadow:
+       1px 1px 0 #f8f8f8,
+     -1px -1px 0 #ffffff,  
+      1px -1px 0 #ffffff,
+      -1px 1px 0 #ffffff,
+       1px 1px 0 #ffffff;
+      /* font-size: 50px; */
+    /* color: #000;
+    -webkit-text-stroke: 1px #fff; */
+}
+
+
+.footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #1cad1c, #639b22, #95c11e );
+}
+
+.footer img{
+    width: 9%;
+}
