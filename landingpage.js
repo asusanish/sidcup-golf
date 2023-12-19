@@ -113,6 +113,6 @@ gsap.from("#page4 h1", {
         scroller: "body",
         start: "top 75%",
         end: "top 70%",
-        scrub: 3
+        scrub: 3 
     }
 })
